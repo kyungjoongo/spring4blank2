@@ -29,6 +29,9 @@ $( document ).ready(function() {
 		고경준 천재님이십니디ㅏsdlfksldkflsdkflksdlfklkdfsgdfsgsdfgsdfgdfsgsdfgdfsg
 	rhrusdfkasjdfkjsadkffsdja
 	spring4 proejct testlskdflskdlfksdlkflk
+	
+	고경준천재님이십니다mysql pogsdkfo, oracle, mssql
+	
 	</div>
 
 
