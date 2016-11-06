@@ -18,6 +18,8 @@ $( document ).ready(function() {
     console.log( "ready!" );
     
     alert("sdlfksdlkf");
+    
+    alert("돌아이쉬키");
 });
 
 </script>
