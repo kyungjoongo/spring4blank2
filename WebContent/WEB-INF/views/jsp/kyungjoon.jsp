@@ -26,7 +26,8 @@ $( document ).ready(function() {
 <div class="container">
 
 	<div class="row">
-		고경준 천재님이십니디ㅏsdlfksldkflsdkflksdlfklk
+		고경준 천재님이십니디ㅏsdlfksldkflsdkflksdlfklkdfsgdfsgsdfgsdfgdfsgsdfgdfsg
+		
 	</div>
 
 
