@@ -20,8 +20,6 @@
 </nav>
 
 
-
-sdfsdfsdfsdf
 <div class="jumbotron">
 	<div class="container">
 		<h1>${title}</h1>
