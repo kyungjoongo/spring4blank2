@@ -30,7 +30,7 @@ $( document ).ready(function() {
 	<div class="row">
 		고경준 천재님이십니디ㅏsdlfksldkflsdkflksdlfklkdfsgdfsgsdfgsdfgdfsgsdfgdfsg
 		
-		
+		야이개새끼야 욕한번 오지게 해주랸
 		ㄴㅇ리ㅏㄴㅁ이라ㅣㄴ망리ㅏㄴ이라니알 추가LSADKFLASDKF
 	</div>
 
