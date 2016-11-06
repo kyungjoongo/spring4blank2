@@ -31,7 +31,7 @@ $( document ).ready(function() {
 		고경준 천재님이십니디ㅏsdlfksldkflsdkflksdlfklkdfsgdfsgsdfgsdfgdfsgsdfgdfsg
 		
 		
-		ㄴㅇ리ㅏㄴㅁ이라ㅣㄴ망리ㅏㄴ이라니알 추가추가추가추가
+		ㄴㅇ리ㅏㄴㅁ이라ㅣㄴ망리ㅏㄴ이라니알 추가LSADKFLASDKF
 	</div>
 
 
