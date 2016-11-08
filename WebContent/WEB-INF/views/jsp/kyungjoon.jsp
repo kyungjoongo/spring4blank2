@@ -72,6 +72,10 @@
 
 
 
+asdasd
+
+
+
 {{each colList}}
 <table>
 	{{ldskfl}} {{ldskfl}} {{ldskfl}}
