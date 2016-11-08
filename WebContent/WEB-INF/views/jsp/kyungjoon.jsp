@@ -9,7 +9,7 @@
 <html lang="ko">
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <head>
-<title>고경준 mvc MVC</title>
+<title>고경준 mvc MVC야이개본ㅁ의 새끼야lsdkflsdkfl욕한번 오지게 해주라ㅑ</title>
 
 <spring:url value="/resources/core/css/hello.css" var="coreCss" />
 <spring:url value="/resources/core/css/bootstrap.min.css"
