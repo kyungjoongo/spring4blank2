@@ -84,15 +84,15 @@
 		//code for filtering//
 		json.homes = $.map(json.homes, function(jsonDataElementOne, index) {
 
-			var test = false;
+			var isAddedData = false;
 			for (var i = 0; i < selectTableNames.length; i++) {
 				if (selectTableNames[i] == jsonDataElementOne.tableName) {
-					test = true;
+					isAddedData = true;
 					break;
 				}
 			}
 
-			if (test == true) {
+			if (isAddedData == true) {
 				return jsonDataElementOne;
 			}
 
