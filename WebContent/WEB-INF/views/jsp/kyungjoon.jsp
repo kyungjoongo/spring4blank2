@@ -23,11 +23,83 @@
 <script>
 	//A $( document ).ready() block.
 	$(document).ready(function() {
-		console.log("ready!");
+		/* 	console.log("ready!");
 
-		alert("sdlfksdlkf");
+			alert("sdlfksdlkf");
 
-		alert("돌아이쉬키");
+			alert("돌아이쉬키");
+		 */
+
+		/* 	var data = {
+				"items" : [ {
+					"id" : 1,
+					"category" : "cat1"
+				}, {
+					"id" : 2,
+					"category" : "cat2"
+				}, {
+					"id" : 3,
+					"category" : "cat1"
+				} ]
+			}; */
+
+		var json = {
+			'homes' : [ {
+				"tableName" : "test66",
+				"price" : "925",
+				"sqft" : "1100",
+				"num_of_beds" : "2",
+				"num_of_baths" : "2.0",
+			}, {
+				"tableName" : "test777",
+				"price" : "1425",
+				"sqft" : "1900",
+				"num_of_beds" : "4",
+				"num_of_baths" : "2.5",
+			}, {
+				"tableName" : "test123",
+				"price" : "1425",
+				"sqft" : "1900",
+				"num_of_beds" : "4",
+				"num_of_baths" : "2.5",
+			}, {
+				"tableName" : "temp012345",
+				"price" : "1425",
+				"sqft" : "1900",
+				"num_of_beds" : "4",
+				"num_of_baths" : "2.5",
+			}
+
+			// ... (more homes) ...     
+			]
+		}
+
+		var selectTableNames = [];
+
+		selectTableNames.push("test66");
+		selectTableNames.push("test777");
+		selectTableNames.push("temp012345");
+
+	
+		//code for filtering//
+		json.homes = $.map(json.homes, function(jsonDataElementOne, index) {
+
+			var test = false;
+			for (var i = 0; i < selectTableNames.length; i++) {
+				if (selectTableNames[i] == jsonDataElementOne.tableName) {
+					test = true;
+					break;
+				}
+			}
+
+			if (test == true) {
+				return jsonDataElementOne;
+			}
+
+		});
+
+
+		alert(JSON.stringify(json.homes));
 
 	});
 </script>
@@ -67,23 +139,12 @@
 	{{coreJs}} </article>
 </div>
 
-<scrip{{blankchar}}t type="tmpl_handlebars" id="tmpl_places"> <article>
+<scrip {{blankchar}}t type="tmpl_handlebars" id="tmpl_places"> <article>
 
 
 
 
-asdasd
-
-asdasdasd
-
-ㄴㅁㅇㄹㄴㅇㄹ
-
-
-ㅁ
-ㅁㄴㅇㅁㄴㅇ
-
-
-{{each colList}}
+asdasd asdasdasd ㄴㅁㅇㄹㄴㅇㄹ ㅁ ㅁㄴㅇㅁㄴㅇ {{each colList}}
 <table>
 	{{ldskfl}} {{ldskfl}} {{ldskfl}}
 	<tr>
