@@ -95,11 +95,6 @@
 			if (isAddedData == true) {
 				return jsonDataElementOne;
 			}
-
-			
-			
-			
-			
 			
 			
 		});
