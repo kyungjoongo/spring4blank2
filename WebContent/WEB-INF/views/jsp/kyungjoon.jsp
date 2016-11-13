@@ -95,11 +95,6 @@
 			if (isAddedData == true) {
 				return jsonDataElementOne;
 			}
-
-			
-			
-			
-			
 			
 			
 		});
@@ -126,6 +121,9 @@
 		<p>&copy; Mkyong.com 2015</p>
 		</footer>
 	</div>
+	
+	
+	sdfdsfsdfadsf
 
 	<spring:url value="/resources/core/css/hello.js" var="coreJs" />
 	<spring:url value="/resources/core/css/bootstrap.min.js"
