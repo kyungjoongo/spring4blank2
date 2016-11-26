@@ -64,6 +64,32 @@ public class WelcomeController {
 
 	}
 	
+	@RequestMapping(value = "/kyungjoon2")
+	public ModelAndView kyungjoon2() {
+
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("msg", "고경준천재님");
+		
+		mav.setViewName("kyungjoon2");
+		
+		return mav;
+
+	}
+	
+	@RequestMapping(value = "/kyungjoon3")
+	public ModelAndView kyungjoon3() {
+
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("msg", "고경준천재님");
+		
+		mav.setViewName("kyungjoon3");
+		
+		return mav;
+
+	}
+	
 	@RequestMapping(value = "/queryFormatter")
 	public ModelAndView queryFormatter() {
 

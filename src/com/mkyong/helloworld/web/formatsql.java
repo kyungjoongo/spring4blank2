@@ -24,18 +24,21 @@ public class formatsql {
 
     	
     	
-        TGSqlParser sqlparser = new TGSqlParser(EDbVendor.dbvoracle);
+        TGSqlParser sqlparser = new TGSqlParser(EDbVendor.dbvgeneric);
 
-         sqlparser.sqltext = "select col1, col2,sum(col3) from table1, table2 where col4 > col5 and col6= 1000";
-
-        int ret = sqlparser.parse();
-        if (ret == 0){
-            GFmtOpt option = GFmtOptFactory.newInstance();
-            String result = FormatterFactory.pp(sqlparser, option);
+        sqlparser.sqltext = "select col1, col2,sum(col3) from table1, table2 where col4 > col5 and col6= 1000";
+        
+        try {
+        	sqlparser.parse();
+            String result = FormatterFactory.pp(sqlparser, GFmtOptFactory.newInstance());
             System.out.println(result);
-        }else{
-            System.out.println(sqlparser.getErrormessage());
-        }
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}	
+        	
+        
      }
     
     
