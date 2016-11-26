@@ -57,7 +57,7 @@ display: none;
 display: none;
 }
 .diff td{
-width: 800px;
+width: 350px;
 ;font-size: 11pt;
 }
 </style>
@@ -74,54 +74,36 @@ width: 800px;
 <script type="text/javascript">
 
 $(document).ready(function() {
-	
-	diffUsingJS(0);
+	//str, str2, appendDiv
+	var str1= "      select * from num where 1=1 num='sdlfksdlkf'\nsfsdkjafksdjfk\nwhere num=1 and test=1 where 1=1\n\n\select * from      query\nslfksldfkldskf\nsdfksdjf\nsdfdskflksdflksdfsdkf1=1\nslkflsdkf";
+	var str2= "\nsfsdkjafksdjfk\nwhere num=1 and test=1 where 1=1\nldkgldkfglkdflgdlfkg fom stes where 1=1\ndlfkgfdlkg 1=1\n\n\n\n\n\nsdfdskflksdflksdfsdkf1=1";	
+	diffUsingJS(str1,str2, "diffoutput");
 });
 
-function diffUsingJS(viewType) {
+function diffUsingJS(str1, str2, outputDiv) {
 	"use strict";
 	var byId = function (id) { return document.getElementById(id); },
-		base = difflib.stringAsLines("      kkkkkkkkkkkkkkkk\nsfsdkjafksdjfk\nwhere num=1 and test=1 where 1=1\n\n\select * from      query\nslfksldfkldskf\nsdfksdjf\nsdfdskflksdflksdfsdkf1=1\nslkflsdkf"),
-		newtxt = difflib.stringAsLines("\nsfsdkjafksdjfk\nwhere num=1 and test=1 where 1=1\nldkgldkfglkdflgdlfkg fom stes where 1=1\ndlfkgfdlkg 1=1\n\n\n\n\n\nsdfdskflksdflksdfsdkf1=1"),
+		base = difflib.stringAsLines(str1),
+		newtxt = difflib.stringAsLines(str2),
 		sm = new difflib.SequenceMatcher(base, newtxt),
 		opcodes = sm.get_opcodes(),
-		diffoutputdiv = byId("diffoutput"),
+		diffoutputdiv = byId(outputDiv),
 		contextSize = 18;
-
+	
+	
 	diffoutputdiv.innerHTML = "";
-	//contextSize = contextSize || null;
-
 	diffoutputdiv.appendChild(diffview.buildView({
 		baseTextLines: base,
 		newTextLines: newtxt,
 		opcodes: opcodes,
-		baseTextName: "dsfgsdfg",
-		newTextName: "fdsgsfdgf",
-		contextSize: contextSize,
-		viewType: viewType
+		viewType: 0
 	}));
 }
 
 </script>
 </head>
 <body>
-	<!-- <h1 class="top"><a href="http://github.com/cemerick/jsdifflib">jsdifflib</a> demo</h1>
-	<div class="top">
-		<strong>Context size (optional):</strong> <input type="text" id="contextSize" value="" />
-	</div>
-	<div class="textInput">
-		<h2>Base Text</h2>
-		<textarea id="baseText"></textarea>
-	</div>
-	<div class="textInput spacer">
-		<h2>New Text</h2>
-		<textarea id="newText"></textarea>
-	</div>
-	<div class="viewType">
-		<input type="radio" name="_viewtype" id="sidebyside" onclick="diffUsingJS(0);" /> <label for="sidebyside">Side by Side Diff</label>
-		&nbsp; &nbsp;
-		<input type="radio" name="_viewtype" id="inline" onclick="diffUsingJS(1);" /> <label for="inline">Inline Diff</label>
-	</div> -->
+	
 	<div id="diffoutput"> </div>
 </body>
 </html>
