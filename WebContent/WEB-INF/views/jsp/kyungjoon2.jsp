@@ -56,8 +56,9 @@ display: none;
 {
 display: none;
 }
-.diff{
-width: 1000px
+.diff td{
+width: 800px;
+;font-size: 11pt;
 }
 </style>
 
@@ -80,7 +81,7 @@ $(document).ready(function() {
 function diffUsingJS(viewType) {
 	"use strict";
 	var byId = function (id) { return document.getElementById(id); },
-		base = difflib.stringAsLines("      kkkkkkkkkkkkkkkk\nsfsdkjafksdjfk\nwhere num=1 and test=1 where 1=1\n\n\select * from      query\nslfksldfkldskf\nsdfksdjf"),
+		base = difflib.stringAsLines("      kkkkkkkkkkkkkkkk\nsfsdkjafksdjfk\nwhere num=1 and test=1 where 1=1\n\n\select * from      query\nslfksldfkldskf\nsdfksdjf\nsdfdskflksdflksdfsdkf1=1\nslkflsdkf"),
 		newtxt = difflib.stringAsLines("\nsfsdkjafksdjfk\nwhere num=1 and test=1 where 1=1\nldkgldkfglkdflgdlfkg fom stes where 1=1\ndlfkgfdlkg 1=1\n\n\n\n\n\nsdfdskflksdflksdfsdkf1=1"),
 		sm = new difflib.SequenceMatcher(base, newtxt),
 		opcodes = sm.get_opcodes(),
@@ -88,7 +89,7 @@ function diffUsingJS(viewType) {
 		contextSize = 18;
 
 	diffoutputdiv.innerHTML = "";
-	contextSize = contextSize || null;
+	//contextSize = contextSize || null;
 
 	diffoutputdiv.appendChild(diffview.buildView({
 		baseTextLines: base,
