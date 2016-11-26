@@ -2,6 +2,7 @@ package com.mkyong.helloworld.web;
 
 import java.util.Map;
 
+import org.hibernate.jdbc.util.FormatStyle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,10 +56,30 @@ public class WelcomeController {
 
 		ModelAndView mav = new ModelAndView();
 		
-		
 		mav.addObject("msg", "고경준천재님");
 		
 		mav.setViewName("kyungjoon");
+		
+		return mav;
+
+	}
+	
+	@RequestMapping(value = "/queryFormatter")
+	public ModelAndView queryFormatter() {
+
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("msg", "고경준천재님");
+		
+		mav.setViewName("kyungjoon2");
+		
+		String sql= "select * from sdkfsdlf where 1=1 and name='sdlkflsdk'";
+		
+		
+		
+	String formattedSQL = new FormatStyle(sql).format();
+		
+		
 		
 		return mav;
 
